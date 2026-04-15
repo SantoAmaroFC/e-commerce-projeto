@@ -1,5 +1,6 @@
 import './Paginas.css'
 
+
 function Home() {
   return (
     <div className={'cont-home'}>
