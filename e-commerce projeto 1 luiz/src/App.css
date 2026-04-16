@@ -49,8 +49,10 @@
   
   
 }
-.cont-app{
-
-  text-align: center;
+.logo{
+  display: flex;
+  height: 50px;
+  width: 50px;
 }
+
 
