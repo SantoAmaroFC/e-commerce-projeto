@@ -4,11 +4,12 @@ import './Paginas.css'
 function Cadastro() {
   return (
    
-   <div className={'cont-cadastro'}>
-        <h1> Faça seu cadastro</h1>
+   <div>
+        <h1> cadastre seus produtos.. </h1>
        <Cadastros />
             <p>
-
+       <br/> <input type="text"/>
+        <button>Enviar</button> <br/>
             </p>
             
     </div>

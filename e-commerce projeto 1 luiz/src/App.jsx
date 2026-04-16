@@ -13,12 +13,14 @@ function App() {
     <nav>
     <button className={'botoes-nav'} onClick={() => setTela(<Home />)}>Home</button>
     <button className={'botoes-nav'} onClick={() => setTela(<Cadastro />)}>Cadastro</button>
+    <input type="text"/> 
+    <button>Enviar</button>
     </nav>
       </header>
     <main className={'cont-main'}>
     {tela}
       </main> 
-      
+    
     </div>
   )
 }
