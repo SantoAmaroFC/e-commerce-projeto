@@ -10,6 +10,7 @@ function App() {
   return (
     <div className={'cont-app'}>
       <header className={'cont-header'}>
+
     <nav>
       <img src="./public/logo1.png"  className='logo' />
     <button className={'botoes-nav'} onClick={() => setTela(<Home />)}>Home</button>
