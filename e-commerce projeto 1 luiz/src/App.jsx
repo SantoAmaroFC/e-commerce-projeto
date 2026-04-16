@@ -14,8 +14,7 @@ function App() {
       <img src="./public/logo1.png"  className='logo' />
     <button className={'botoes-nav'} onClick={() => setTela(<Home />)}>Home</button>
     <button className={'botoes-nav'} onClick={() => setTela(<Cadastro />)}>Cadastro</button>
-    <input type="text"/> 
-    <button>Enviar</button>
+    
     </nav>
       </header>
     <main className={'cont-main'}>
