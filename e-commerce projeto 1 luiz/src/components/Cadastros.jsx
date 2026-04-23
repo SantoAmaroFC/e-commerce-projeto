@@ -9,20 +9,21 @@ function Cadastro() {
         
         
           <label> 
-            selecione o tipo
+            Selecione o tipo:
           </label>
         <select
         >
+        <option value="">Acessório</option>
         <option value="">Camisa</option>
+        <option value="">Blusa</option>
         <option value="">Calça</option>
-        <option value="">Sapato</option>
-        <option value="">Meia</option>
         <option value="">Short</option>
-        <option value="">Chapeu</option>
         <option value="">Cinto</option>
+        <option value="">Meia</option>
+        <option value="">Sapato</option>
         </select>
         <label> 
-            selecione o tamanho
+            Selecione o Tamanho:
           </label>
         <select
         >
@@ -36,7 +37,7 @@ function Cadastro() {
         </select>
 
         <label> 
-            Marca
+            Marca:
           </label>
         <select
         >
@@ -44,17 +45,17 @@ function Cadastro() {
         <option value="">Adidas</option>
         <option value="">Puma</option>
         <option value="">Lacoste</option>
-        <option value="">louis vuitton</option>
+        <option value="">Louis Vuitton</option>
         <option value="">Balenciaga</option>
         
         </select>
         <label> 
-            Genero
+            Gênero: 
           </label>
         <select
         >
-        <option value="">M</option>
-        <option value="">F</option>
+        <option value="">Masculino</option>
+        <option value="">Feminino</option>
        
         
         </select>
