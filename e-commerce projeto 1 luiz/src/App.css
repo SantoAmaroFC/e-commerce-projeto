@@ -17,14 +17,14 @@
 
   justify-content: center;
   align-items:center;
-  gap: 200px;
+  
   
   
   
 }
 .cont-header nav{
   display: flex;
-  gap:1750px; 
+  gap:150px; 
   
 }
 
