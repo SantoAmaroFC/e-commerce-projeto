@@ -3,15 +3,15 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: yellow;
+  background-color: var(--background-header);
   text-align: center
 }
 
 .cont-header{
-  background-color: yellow;
+  background-color: var(--background-header);
   height: 100px;
   display: flex;
- box-shadow: 0px 4px 6px rgb(245, 245, 1);
+ box-shadow: 0px 4px 6px var(--sonbreamento-header);
  position: relative;
   z-index: 1000;
   text-align: center;
@@ -33,7 +33,7 @@
 }
 
 .cont-main{
-  background-color: #fff;
+  background-color: var(--background-main);
   flex: 1;
   display: flex;
   align-items: center;
@@ -46,7 +46,7 @@
   padding: 8px 14px;
   font-size: 16px;
   border-radius: 8px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--botoes-nav);
   cursor: pointer;
   background: none;       
    
