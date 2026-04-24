@@ -8,5 +8,15 @@
 html, body, #root{
   min-height: 100vh;
 
-  background-color: darkgray;
+  background-color: grey;
 }
+
+:root{
+ 
+ --ink-black: #000814ff;
+--botoes-nav: #e9eaecff;
+--background-main:  #e9eaecff;
+--sonbreamento-header: #e4b61aff;
+--background-header: #fbe134ff;
+}
+
