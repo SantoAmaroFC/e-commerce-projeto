@@ -78,6 +78,33 @@
     
 }
 
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #111;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed; /* fixa no topo */
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.banner-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 
 
   

@@ -67,6 +67,8 @@ function Cadastro() {
         onChange={(e) => setPreco((e.target.value))}
        
         />
+
+      <button>ENVIAR</button>
         
     </div>
   )
