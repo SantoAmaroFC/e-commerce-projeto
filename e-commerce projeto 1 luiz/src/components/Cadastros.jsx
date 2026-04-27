@@ -22,6 +22,7 @@ function Cadastro() {
           </label>
         <select className='input-cad'
         >
+        <option value="">tipo</option>
         <option value="">Acessório</option>
         <option value="">Camisa</option>
         <option value="">Blusa</option>
@@ -36,6 +37,7 @@ function Cadastro() {
           </label>
         <select className='input-cad'
         >
+        <option value="">Tamanho</option>
         <option value="">PP</option>
         <option value="">P</option>
         <option value="">M</option>
@@ -50,6 +52,7 @@ function Cadastro() {
           </label>
         <select className='input-cad'
         >
+        <option value="">Cor</option>
         <option value="">Preto</option>
         <option value="">Branco</option>
         <option value="">Marrom</option>
