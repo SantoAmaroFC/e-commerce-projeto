@@ -2,6 +2,8 @@
    
     flex: 1;
     
+
+    
 }
 .cont-cadastro{
 
@@ -18,4 +20,11 @@
     
     
 }
+.propaganda{
+    display: flex;
+    height: 90vh;
+    width: 99vw;
+    margin: 0;
+    
+  }
 

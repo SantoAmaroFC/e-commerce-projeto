@@ -13,7 +13,7 @@ function App() {
       <header className={'cont-header'}>
 
     <nav>
-      <img src="./public/logo1.png"  className='logo' />
+      <img src="./public/logo_aura_semBG.png"  className='logo' />
     <button className={'botoes-nav'} onClick={() => setTela(<Home />)}>Home</button>
     <button className={'botoes-nav'} onClick={() => setTela(<Cadastro />)}>Cadastro</button>
     

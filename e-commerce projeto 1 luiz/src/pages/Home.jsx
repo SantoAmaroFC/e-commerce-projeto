@@ -5,10 +5,11 @@ import './Paginas.css'
 function Home() {
   return (
     <div className={'cont-home'}>
+        <img className="propaganda" src="../public/propaganda.png" alt="Descrição da foto"></img>
+
+      <h1>PRODUTOS AQUI
         
-      <h1>Seja bem vindo aqui ficara seus produtos
-        
-      </h1>
+       </h1>
       
     </div>
   )
