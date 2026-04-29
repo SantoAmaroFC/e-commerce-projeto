@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import Home from './pages/Home'
 import Cadastro from './pages/Cadastro'
+import Cadastroconta from './pages/Cadastroconta'
 
 function App() {
  const[tela, setTela] = useState(<Home />)
@@ -11,11 +12,12 @@ function App() {
   return (
     <div className={'cont-app'}>
       <header className={'cont-header'}>
-
+      
     <nav>
       <img src="./public/logo_aura_semBG.png"  className='logo' />
     <button className={'botoes-nav'} onClick={() => setTela(<Home />)}>Home</button>
     <button className={'botoes-nav'} onClick={() => setTela(<Cadastro />)}>Cadastro</button>
+    <button className={'botoes-nav'} onClick={() => setTela(<Cadastroconta />)}>Perfil</button>
     
     </nav>
       </header>

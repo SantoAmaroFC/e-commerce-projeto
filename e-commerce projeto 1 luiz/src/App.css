@@ -78,36 +78,16 @@
     
 }
 
-.banner-container {
-  width: 100%;
-  overflow: hidden;
-  background-color: #111;
-  color: #fff;
-  padding: 10px 0;
-  position: fixed; /* fixa no topo */
-  top: 0;
-  left: 0;
-  z-index: 999;
-}
 
-.banner-text {
-  display: inline-block;
-  white-space: nowrap;
-  animation: slide 10s linear infinite;
-}
 
-@keyframes slide {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
+
+
+
+
 .input-cad {
   width: 100%;
   padding: 12px 14px;
-  border: 2px solid #ddd;
+  border: 2px solid var(--button-cad-color);
   border-radius: 20px;
   font-size: 16px;
   outline: none;
@@ -119,13 +99,13 @@
 
 
 .input-cad:focus {
-  border-color: #4f46e5;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+  border-color: var(--button-cad-bordercolor);
+  box-shadow: 0 0 0 3px var(--sobreamento-cad);
 }
 .cad-text{
   font-size: 20px;
   line-height: 1.5;
-  color: #000000;
+  color: var(--button-text-color);
   max-width: 500px;
   margin-bottom: 10px;
 }

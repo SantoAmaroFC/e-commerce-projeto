@@ -18,5 +18,9 @@ html, body, #root{
 --background-main:  #e9eaecff;
 --sonbreamento-header: #e4b61aff;
 --background-header: #fbe134ff;
+--button-cad-color: #ddd;
+--button-cad-bordercolor: #4f46e5;
+--button-text-color: #000000;
+--sobreamento-cad: rgba(79, 70, 229, 0.2);
 }
 
