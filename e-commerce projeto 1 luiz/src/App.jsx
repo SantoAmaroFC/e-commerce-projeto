@@ -13,13 +13,7 @@ function App() {
     <div className={'cont-app'}>
       <header className={'cont-header'}>
       
-    <nav>
-      <img src="./public/logo_aura_semBG.png"  className='logo' />
-    <button className={'botoes-nav'} onClick={() => setTela(<Home />)}>Home</button>
-    <button className={'botoes-nav'} onClick={() => setTela(<Cadastro />)}>Cadastro</button>
-    <button className={'botoes-nav'} onClick={() => setTela(<Cadastroconta />)}>Perfil</button>
     
-    </nav>
       </header>
     <main className={'cont-main'}>
     {tela}
