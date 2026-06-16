@@ -7,13 +7,12 @@
 
 html, body, #root{
   min-height: 100vh;
-
-  background-color: grey;
+  background-color: #e9ecef;
 }
 
 :root{
- 
- --ink-black: #000814ff;
+
+--ink-black: #000814ff;
 --botoes-nav: #e9eaecff;
 --background-main:  #e9eaecff;
 --sonbreamento-header: #e4b61aff;

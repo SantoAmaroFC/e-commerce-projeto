@@ -8,8 +8,6 @@ function Cadastro() {
    
    <div>
     <Navbar />
-      <Upload />
-
        <Cadastros />
             <p>
        

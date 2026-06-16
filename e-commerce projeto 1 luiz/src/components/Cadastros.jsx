@@ -1,27 +1,26 @@
-import {useState} from 'react'
+import { useState } from 'react';
+import './Cadastro.css';
 
 function Cadastro() {
-    const [descricao, setDescricao] = useState("")
-    const [preco, setPreco] = useState("")
-    const [nome, setNome] = useState("")
+  const [descricao, setDescricao] = useState("")
+  const [preco, setPreco] = useState("")
+  const [nome, setNome] = useState("")
 
-    
+
   return (
     <div className='cont-cadastro'>
-        
-     
 
-         <p className='cad-text'>Digite o Nome:</p>
-    <input type='text' className='input-cad' placeholder='Digite o Nome do produto'
+      <p className='cad-text'>Digite o Nome:</p>
+      <input type='text' className='input-cad' placeholder='Digite o Nome do produto'
         onChange={(e) => setNome((e.target.value))}
-       
-        />
-        
-          <label className='cad-text'> 
-            Selecione o tipo:
+
+      />
+
+      <label className='cad-text'>
+        Selecione o tipo:
           </label>
-        <select className='input-cad'
-        >
+      <select className='input-cad'
+      >
         <option value="">tipo</option>
         <option value="">Acessório</option>
         <option value="">Camisa</option>
@@ -31,12 +30,12 @@ function Cadastro() {
         <option value="">Cinto</option>
         <option value="">Meia</option>
         <option value="">Sapato</option>
-        </select>
-        <label className='cad-text'> 
-            Selecione o Tamanho:
+      </select>
+      <label className='cad-text'>
+        Selecione o Tamanho:
           </label>
-        <select className='input-cad'
-        >
+      <select className='input-cad'
+      >
         <option value="">Tamanho</option>
         <option value="">PP</option>
         <option value="">P</option>
@@ -45,34 +44,32 @@ function Cadastro() {
         <option value="">GG</option>
         <option value="">XGG</option>
         <option value="">XXGG</option>
-        </select>
+      </select>
 
-        <label className='cad-text'> 
-           <p lassName='cad-text'> Selecione a cor:</p>
-          </label>
-        <select className='input-cad'
-        >
+      <label className='cad-text'>
+        <p lassName='cad-text'> Selecione a cor:</p>
+      </label>
+      <select className='input-cad'
+      >
         <option value="">Cor</option>
         <option value="">Preto</option>
         <option value="">Branco</option>
         <option value="">Marrom</option>
         <option value="">Cinza</option>
-       
-        </select>
-          <p className='cad-text'>Digite a descrição</p>
-    <input type='text' className='input-cad' placeholder='Digite a descriçao do produto'
-        onChange={(e) => setDescricao((e.target.value))}
-       
-        />
 
-        <p className='cad-text'>Digite o Preço</p>
-    <input type='Number' className='input-cad' placeholder='Digite o Preço'
+      </select>
+      <p className='cad-text'>Digite a descrição</p>
+      <input type='text' className='input-cad' placeholder='Digite a descriçao do produto'
+        onChange={(e) => setDescricao((e.target.value))}
+      />
+
+      <p className='cad-text'>Digite o Preço</p>
+      <input type='Number' className='input-cad' placeholder='Digite o Preço'
         onChange={(e) => setPreco((e.target.value))}
-       
-        />
+      />
 
       <button className='input-cad'>ENVIAR</button>
-        
+
     </div>
   )
 }

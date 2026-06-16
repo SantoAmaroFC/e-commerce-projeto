@@ -1,30 +1,17 @@
 .cont-home{
-   
     flex: 1;
-    
-
-    
 }
 .cont-cadastro{
-
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    
-    
-   
-   
-    
-    
 }
 .propaganda{
     display: flex;
     height: 90vh;
     width: 99vw;
     margin: 0;
-    
   }
-
