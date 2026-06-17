@@ -16,15 +16,8 @@
   z-index: 1000;
   text-align: center;
  
-  
-
   justify-content: center;
   align-items:center;
-  
-  
-
-  
-  
 }
 .cont-header nav{
   display: flex;
@@ -48,7 +41,7 @@
   border-radius: 8px;
   background-color: var(--botoes-nav);
   cursor: pointer;
-  background: none;       
+  background: none;
    
 }
 .logo{
@@ -61,21 +54,15 @@
   flex-direction: column;
   
 }
-
-  
-
 .tipo{
   display: flex;
   flex-direction: column;
 }
 .nome-produto{
-    
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: center;
-    
-    
 }
 
 

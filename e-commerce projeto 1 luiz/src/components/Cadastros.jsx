@@ -5,7 +5,7 @@ function Cadastro() {
   const [descricao, setDescricao] = useState("")
   const [preco, setPreco] = useState("")
   const [nome, setNome] = useState("")
-
+  const [quantidade, setQuantidade] = useState("")
 
   return (
     <div className='cont-cadastro'>
@@ -66,6 +66,11 @@ function Cadastro() {
       <p className='cad-text'>Digite o Preço</p>
       <input type='Number' className='input-cad' placeholder='Digite o Preço'
         onChange={(e) => setPreco((e.target.value))}
+      />
+
+<p className='cad-text'>Digite o quantidade:</p>
+      <input type='Number' className='input-cad' placeholder='Digite o Nome do produto'
+        onChange={(e) => setQuantidade((e.target.value))}
       />
 
       <button className='input-cad'>ENVIAR</button>
