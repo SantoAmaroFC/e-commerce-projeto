@@ -5,7 +5,10 @@ function Cadastroconta() {
   return (
     <div>
       <Navbar />
-        <h1>aqui ira ser o cadastro do perfil</h1>
+      <Cadastroconta />
+      <p>
+
+      </p>
     </div>
   )
 }

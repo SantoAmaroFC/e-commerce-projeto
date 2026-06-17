@@ -13,7 +13,6 @@ function App() {
     <div className={'cont-app'}>
       <header className={'cont-header'}>
       
-    
       </header>
     <main className={'cont-main'}>
     {tela}

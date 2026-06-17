@@ -10,7 +10,7 @@ import Cadastroconta from "../pages/Cadastroconta";
 const router = createBrowserRouter([
     {path: "/", element: <Home />  },
     {path: "/cadastro", element: <Cadastro /> },
-    {path: "/cadastroconta", element: <Cadastroconta />  },
+    // {path: "/cadastroconta", element: <Cadastroconta />  },
     
     
 
