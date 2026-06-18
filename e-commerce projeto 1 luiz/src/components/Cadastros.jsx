@@ -1,79 +1,104 @@
 import { useState } from 'react';
+import axios from 'axios';
 import './Cadastro.css';
 
 function Cadastro() {
-  const [descricao, setDescricao] = useState("")
-  const [preco, setPreco] = useState("")
-  const [nome, setNome] = useState("")
-  const [quantidade, setQuantidade] = useState("")
+  const [inputDescricao, setDescricao] = useState("") 
+  const [inputPreco, setPreco] = useState("")
+  const [inputNome, setNome] = useState("")
+  const [inputCor, setCor] = useState('')
+  const [inputQuantidade, setQuantidade] = useState("")
+  const [inputTipo, setTipo] = useState("")
+  const [inputTamanho, setTamanho] = useState("")
+
+  const cadastrarProduto = async () => {
+    try {
+        const produto = {
+          // nome, tipo, tamanho, cor, descricao, preco, quantidade  
+          nome: inputNome,
+          tipo: inputTipo,
+          tamanho: inputTamanho,
+          cor: inputCor,
+          descricao: inputDescricao,
+          preco: inputPreco,
+          quantidade: inputQuantidade
+        };
+        const response = await axios.post('http://localhost:3000/produto', produto);
+        // if (response.status === 201) {
+        //     fetchProdutos();
+        //     limparForm();
+        // }
+    } catch (error) {
+        console.error('Erro ao adicionar cliente:', error);
+    }
+};
 
   return (
     <div className='cont-cadastro'>
 
       <p className='cad-text'>Digite o Nome:</p>
       <input type='text' className='input-cad' placeholder='Digite o Nome do produto'
-        onChange={(e) => setNome((e.target.value))}
+        value={inputNome} onChange={(e) => setNome((e.target.value))}
 
       />
 
       <label className='cad-text'>
         Selecione o tipo:
           </label>
-      <select className='input-cad'
-      >
+      <select value = {inputTipo} onChange = {(e) => setTipo(e.target.value)} className='input-cad'>
         <option value="">tipo</option>
         <option value="">Acessório</option>
-        <option value="">Camisa</option>
-        <option value="">Blusa</option>
-        <option value="">Calça</option>
-        <option value="">Short</option>
-        <option value="">Cinto</option>
-        <option value="">Meia</option>
-        <option value="">Sapato</option>
+        <option value="Camisa">Camisa</option>
+        <option value="Blusa">Blusa</option>
+        <option value="Calça">Calça</option>
+        <option value="Short">Short</option>
+        <option value="Cinto">Cinto</option>
+        <option value="Meia">Meia</option>
+        <option value="Sapato">Sapato</option>
       </select>
       <label className='cad-text'>
         Selecione o Tamanho:
           </label>
-      <select className='input-cad'
+      <select value = {inputTamanho} onChange = {(e) => setTamanho(e.target.value)} className='input-cad'
       >
         <option value="">Tamanho</option>
-        <option value="">PP</option>
-        <option value="">P</option>
-        <option value="">M</option>
-        <option value="">G</option>
-        <option value="">GG</option>
-        <option value="">XGG</option>
-        <option value="">XXGG</option>
+        <option value="PP">PP</option>
+        <option value="P">P</option>
+        <option value="M">M</option>
+        <option value="G">G</option>
+        <option value="GG">GG</option>
+        <option value="XGG">XGG</option>
+        <option value="XXGG">XXGG</option>
       </select>
 
       <label className='cad-text'>
-        <p lassName='cad-text'> Selecione a cor:</p>
+        <p className='cad-text'> Selecione a cor:</p>
       </label>
-      <select className='input-cad'
+      <select value={inputCor} onChange={(e) => setCor(e.target.value)}className='input-cad'
       >
         <option value="">Cor</option>
-        <option value="">Preto</option>
-        <option value="">Branco</option>
-        <option value="">Marrom</option>
-        <option value="">Cinza</option>
+        <option value="Preto">Preto</option>
+        <option value="Branco">Branco</option>
+        <option value="Marrom">Marrom</option>
+        <option value="Cinza">Cinza</option>
 
       </select>
       <p className='cad-text'>Digite a descrição</p>
       <input type='text' className='input-cad' placeholder='Digite a descriçao do produto'
-        onChange={(e) => setDescricao((e.target.value))}
+        value = {inputDescricao} onChange={(e) => setDescricao((e.target.value))}
       />
 
       <p className='cad-text'>Digite o Preço</p>
       <input type='Number' className='input-cad' placeholder='Digite o Preço'
-        onChange={(e) => setPreco((e.target.value))}
+        value = {inputPreco} onChange={(e) => setPreco((e.target.value))}
       />
 
 <p className='cad-text'>Digite o quantidade:</p>
       <input type='Number' className='input-cad' placeholder='Digite o Nome do produto'
-        onChange={(e) => setQuantidade((e.target.value))}
+        value = {inputQuantidade} onChange={(e) => setQuantidade((e.target.value))}
       />
 
-      <button className='input-cad'>ENVIAR</button>
+      <button onClick = {cadastrarProduto} className='input-cad'>ENVIAR</button>
 
     </div>
   )

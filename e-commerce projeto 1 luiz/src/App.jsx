@@ -6,19 +6,39 @@ import Cadastro from './pages/Cadastro'
 import Cadastroconta from './pages/Cadastroconta'
 
 function App() {
- const[tela, setTela] = useState(<Home />)
- const [itens, setItens] = useState([]);
+  const [tela, setTela] = useState(<Home />)
+  const [itens, setItens] = useState([]);
+  // const [produtos, setProdutos] = useState([]);
+
+  // const fetchProdutos = async () => {
+  //   try {
+  //     const response = await axios.get('http://localhost:3000/produto');
+  //     setProdutos(response.data);
+  //   } catch (error) {
+  //     console.error('Erro ao buscar produto:', error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   console.log("teste")
+  //   fetchProdutos();
+  // }, []);
+
+  // useEffect(() => {
+  //   console.log(produtos);
+  // }, [produtos]);
+
 
   return (
     <div className={'cont-app'}>
       <header className={'cont-header'}>
-      
+
       </header>
-    <main className={'cont-main'}>
-    {tela}
-      </main> 
-     {itens} {setItens}
-      {itens} 
+      <main className={'cont-main'}>
+        {tela}
+      </main>
+      {itens} {setItens}
+      {itens}
     </div>
   )
 }
