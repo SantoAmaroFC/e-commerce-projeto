@@ -5,7 +5,6 @@ function CardProduto(prop) {
 
     return (
         <div className = 'card-Produtos'>
-        {/* nome, tipo, tamanho, cor, descricao, preco, quantidade */}
             <p>Nome: {prop.p.nome}</p>
             <p>Tipo: {prop.p.tipo}</p>
             <p>tamanho: {prop.p.tamanho}</p>
@@ -13,6 +12,7 @@ function CardProduto(prop) {
             <p>descricao: {prop.p.descricao}</p>
             <p>preco: {prop.p.preco}</p>
             <p>quantidade: {prop.p.quantidade}</p>
+            <button onClick={() => excluir(id)}>excluir</button>
         </div>
     )
 }

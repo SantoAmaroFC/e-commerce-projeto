@@ -26,6 +26,10 @@ function Home() {
     console.log(produtos);
   }, [produtos]);
 
+  function excluir(id) {
+    setProdutos(produtos.filter((v) => v.id != id))
+  }
+
   return (
     <div className={'cont-home'}>
       <Navbar />
