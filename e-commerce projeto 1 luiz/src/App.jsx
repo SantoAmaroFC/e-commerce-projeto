@@ -7,7 +7,7 @@ import Cadastroconta from './pages/Cadastroconta'
 
 function App() {
   const [tela, setTela] = useState(<Home />)
-  const [itens, setItens] = useState([]);
+  
   // const [produtos, setProdutos] = useState([]);
 
   // const fetchProdutos = async () => {
@@ -37,8 +37,7 @@ function App() {
       <main className={'cont-main'}>
         {tela}
       </main>
-      {itens} {setItens}
-      {itens}
+      
     </div>
   )
 }
