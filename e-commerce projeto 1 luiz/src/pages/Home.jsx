@@ -31,7 +31,7 @@ function Home() {
       <Navbar />
         <img className="propaganda" src="../public/propaganda.png" alt="Descrição da foto"></img>
       <div>
-      <h1>PRODUTOS AQUI</h1>
+      
         {
           produtos.map((produto) => (
           <CardProduto p={produto} key={produto.id} fetchProdutos={fetchProdutos}/>))

@@ -43,10 +43,10 @@ function Cadastro() {
       />
 
       <label className='cad-text'>
-        Selecione o tipo:
+        Selecione o Tipo:
           </label>
       <select value = {inputTipo} onChange = {(e) => setTipo(e.target.value)} className='input-cad'>
-        <option value="">tipo</option>
+        <option value="">Tipo</option>
         <option value="">Acessório</option>
         <option value="Camisa">Camisa</option>
         <option value="Blusa">Blusa</option>
@@ -72,7 +72,7 @@ function Cadastro() {
       </select>
 
       <label className='cad-text'>
-        <p className='cad-text'> Selecione a cor:</p>
+        <p className='cad-text'> Selecione a Cor:</p>
       </label>
       <select value={inputCor} onChange={(e) => setCor(e.target.value)}className='input-cad'
       >
@@ -83,7 +83,7 @@ function Cadastro() {
         <option value="Cinza">Cinza</option>
 
       </select>
-      <p className='cad-text'>Digite a descrição</p>
+      <p className='cad-text'>Digite a Descrição</p>
       <input type='text' className='input-cad' placeholder='Digite a descriçao do produto'
         value = {inputDescricao} onChange={(e) => setDescricao((e.target.value))}
       />
@@ -93,7 +93,7 @@ function Cadastro() {
         value = {inputPreco} onChange={(e) => setPreco((e.target.value))}
       />
 
-<p className='cad-text'>Digite o quantidade:</p>
+<p className='cad-text'>Digite a Quantidade:</p>
       <input type='Number' className='input-cad' placeholder='Digite o Nome do produto'
         value = {inputQuantidade} onChange={(e) => setQuantidade((e.target.value))}
       />
