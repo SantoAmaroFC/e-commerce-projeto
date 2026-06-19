@@ -3,13 +3,13 @@ import axios from 'axios';
 import './Cadastro.css';
 
 function Cadastro() {
-  const [inputDescricao, setDescricao] = useState("") 
-  const [inputPreco, setPreco] = useState("")
-  const [inputNome, setNome] = useState("")
-  const [inputCor, setCor] = useState('')
-  const [inputQuantidade, setQuantidade] = useState("")
-  const [inputTipo, setTipo] = useState("")
-  const [inputTamanho, setTamanho] = useState("")
+  const [inputDescricao, setInputDescricao] = useState("") 
+  const [inputPreco, setInputPreco] = useState("")
+  const [inputNome, setInputNome] = useState("")
+  const [inputCor, setInputCor] = useState('')
+  const [inputQuantidade, setInputQuantidade] = useState("")
+  const [inputTipo, setInputTipo] = useState("")
+  const [inputTamanho, setInputTamanho] = useState("")
 
   const cadastrarProduto = async () => {
     try {
@@ -38,14 +38,14 @@ function Cadastro() {
 
       <p className='cad-text'>Digite o Nome:</p>
       <input type='text' className='input-cad' placeholder='Digite o Nome do produto'
-        value={inputNome} onChange={(e) => setNome((e.target.value))}
+        value={inputNome} onChange={(e) => setInputNome((e.target.value))}
 
       />
 
       <label className='cad-text'>
         Selecione o Tipo:
           </label>
-      <select value = {inputTipo} onChange = {(e) => setTipo(e.target.value)} className='input-cad'>
+      <select value = {inputTipo} onChange = {(e) => setInputTipo(e.target.value)} className='input-cad'>
         <option value="">Tipo</option>
         <option value="">Acessório</option>
         <option value="Camisa">Camisa</option>
@@ -59,7 +59,7 @@ function Cadastro() {
       <label className='cad-text'>
         Selecione o Tamanho:
           </label>
-      <select value = {inputTamanho} onChange = {(e) => setTamanho(e.target.value)} className='input-cad'
+      <select value = {inputTamanho} onChange = {(e) => setInputTamanho(e.target.value)} className='input-cad'
       >
         <option value="">Tamanho</option>
         <option value="PP">PP</option>
@@ -74,7 +74,7 @@ function Cadastro() {
       <label className='cad-text'>
         <p className='cad-text'> Selecione a Cor:</p>
       </label>
-      <select value={inputCor} onChange={(e) => setCor(e.target.value)}className='input-cad'
+      <select value={inputCor} onChange={(e) => setInputCor(e.target.value)}className='input-cad'
       >
         <option value="">Cor</option>
         <option value="Preto">Preto</option>
@@ -85,17 +85,17 @@ function Cadastro() {
       </select>
       <p className='cad-text'>Digite a Descrição</p>
       <input type='text' className='input-cad' placeholder='Digite a descriçao do produto'
-        value = {inputDescricao} onChange={(e) => setDescricao((e.target.value))}
+        value = {inputDescricao} onChange={(e) => setInputDescricao((e.target.value))}
       />
 
       <p className='cad-text'>Digite o Preço</p>
       <input type='Number' className='input-cad' placeholder='Digite o Preço'
-        value = {inputPreco} onChange={(e) => setPreco((e.target.value))}
+        value = {inputPreco} onChange={(e) => setInputPreco((e.target.value))}
       />
 
 <p className='cad-text'>Digite a Quantidade:</p>
       <input type='Number' className='input-cad' placeholder='Digite o Nome do produto'
-        value = {inputQuantidade} onChange={(e) => setQuantidade((e.target.value))}
+        value = {inputQuantidade} onChange={(e) => setInputQuantidade((e.target.value))}
       />
 
       <button onClick = {cadastrarProduto} className='input-cad'>ENVIAR</button>
