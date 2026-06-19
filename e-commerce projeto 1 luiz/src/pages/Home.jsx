@@ -26,10 +26,6 @@ function Home() {
     console.log(produtos);
   }, [produtos]);
 
-  function excluir(id) {
-    setProdutos(produtos.filter((v) => v.id != id))
-  }
-
   return (
     <div className={'cont-home'}>
       <Navbar />
@@ -37,13 +33,10 @@ function Home() {
       <div>
       
         {
-          produtos.map((produtos) => (
-          <CardProduto p={produtos} key={produtos.id}/>))
+          produtos.map((produto) => (
+          <CardProduto p={produto} key={produto.id} fetchProdutos={fetchProdutos}/>))
         }
       </div>
-       
-      
-
     </div>
   )
 }

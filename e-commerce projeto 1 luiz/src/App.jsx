@@ -37,7 +37,6 @@ function App() {
       <main className={'cont-main'}>
         {tela}
       </main>
-      
     </div>
   )
 }
