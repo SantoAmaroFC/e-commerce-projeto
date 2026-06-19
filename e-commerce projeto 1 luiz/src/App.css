@@ -42,8 +42,8 @@
   background-color: var(--botoes-nav);
   cursor: pointer;
   background: none;
-   
 }
+
 .logo{
   display: flex;
   height: 100px;

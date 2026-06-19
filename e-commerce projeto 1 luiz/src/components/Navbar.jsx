@@ -4,7 +4,7 @@ function Navbar() {
   return (
         <div className="cont-header">
       <nav className="nav">
-        <img src="./public/logo_aura_semBG.png"  className="logo" />
+        <img src="./public/logo_aura_semBG.png"  className="logo"/>
         <Link to="/" className="botoes-nav">Home</Link>
         <Link to="/cadastro" className="botoes-nav">Cadastro de Produto</Link>
         {/* <Link to="/cadastroconta">CadastroConta</Link> */}
