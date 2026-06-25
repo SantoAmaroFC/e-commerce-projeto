@@ -43,7 +43,6 @@
   cursor: pointer;
   background: none;
 }
-
 .logo{
   display: flex;
   height: 100px;
@@ -52,7 +51,6 @@
 .botao-cad{
   display: flex;
   flex-direction: column;
-  
 }
 .tipo{
   display: flex;

@@ -15,3 +15,10 @@
     width: 99vw;
     margin: 0;
   }
+.cont-produtos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    flex-wrap: wrap;
+}

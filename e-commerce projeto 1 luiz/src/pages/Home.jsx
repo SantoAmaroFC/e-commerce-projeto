@@ -30,7 +30,7 @@ function Home() {
     <div className={'cont-home'}>
       <Navbar />
         <img className="propaganda" src="../public/propaganda.png" alt="Descrição da foto"></img>
-      <div>
+      <div className='cont-produtos'>
       
         {
           produtos.map((produto) => (
