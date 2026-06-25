@@ -7,12 +7,12 @@ function CardProduto(prop) {
 
     const [editando, setEditando] = useState(false);
     const [inputNome, setInputNome] = useState(prop.p.nome);
-    const [inputTipo, setInputTipo] = useState("");
-    const [inputTamanho, setInputTamanho] = useState("");
-    const [inputCor, setInputCor] = useState("");
-    const [inputDescricao, setInputDescricao] = useState("");
-    const [inputPreco, setInputPreco] = useState("");
-    const [inputQuantidade, setInputQuantidade] = useState("");
+    const [inputTipo, setInputTipo] = useState(prop.p.tipo);
+    const [inputTamanho, setInputTamanho] = useState(prop.p.tamanho);
+    const [inputCor, setInputCor] = useState(prop.p.cor);
+    const [inputDescricao, setInputDescricao] = useState(prop.p.descricao);
+    const [inputPreco, setInputPreco] = useState(prop.p.preco);
+    const [inputQuantidade, setInputQuantidade] = useState(prop.p.quantidade);
 
     const deletarProduto = async (id) => {
         try {
