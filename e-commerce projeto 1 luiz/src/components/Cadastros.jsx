@@ -47,7 +47,7 @@ function Cadastro() {
           </label>
       <select value = {inputTipo} onChange = {(e) => setInputTipo(e.target.value)} className='input-cad'>
         <option value="">Tipo</option>
-        <option value="">Acessório</option>
+        <option value="Acessório">Acessório</option>
         <option value="Camisa">Camisa</option>
         <option value="Blusa">Blusa</option>
         <option value="Calça">Calça</option>
