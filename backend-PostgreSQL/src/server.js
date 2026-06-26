@@ -44,9 +44,10 @@ app.get('/produto/:id', async (req, res) => {
     }
 });
 
+
 // Rota para adicionar um cliente
 app.post('/produto', async (req, res) => {
-    const { nome, tipo, tamanho, cor, descricao, preco, quantidade} = req.body;
+    const { nome, tipo, tamanho, cor, descricao, preco, quantidade } = req.body;
     try {
         const result = await pool.query(
             'INSERT INTO produto (nome, tipo, tamanho, cor, descricao, preco, quantidade) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *',
@@ -58,6 +59,8 @@ app.post('/produto', async (req, res) => {
         res.status(500).json({ error: 'Erro ao adicionar produto' });
     }
 });
+
+
 
 // Rota para atualizar um cliente
 app.put('/produto/:id', async (req, res) => {
@@ -93,7 +96,89 @@ app.delete('/produto/:id', async (req, res) => {
     }
 });
 
+
+
+app.get('/dashboard', async (req, res) => {
+    try {
+        const result = await pool.query(`
+        SELECT json_build_object(
+            'total_itens_cadastrados', (
+                SELECT COUNT(*) 
+                FROM produto
+                ),
+                
+                'quantidade_total_estoque', (
+                    SELECT COALESCE(SUM(quantidade), 0) 
+                    FROM produto
+                    ),
+                    
+                    'valor_total_estoque', (
+                        SELECT COALESCE(SUM(preco * quantidade), 0) 
+                        FROM produto
+                        ),
+                        
+                        'produtos_pouco_estoque', (
+                            SELECT COALESCE(json_agg(p), '[]'::json)
+                            FROM (
+                                SELECT id, nome, tipo, tamanho, cor, preco, quantidade
+                                FROM produto
+                                WHERE quantidade <= 5
+                                ORDER BY quantidade ASC
+                                ) p
+                                ),
+                                
+                                'produtos_por_tipo', (
+                                    SELECT COALESCE(json_agg(t), '[]'::json)
+                                    FROM (
+                                        SELECT tipo, COUNT(*) AS quantidade
+                                        FROM produto
+                                        GROUP BY tipo
+                                        ORDER BY quantidade DESC
+                                        ) t
+                                        ),
+                                        
+                                        'produtos_por_cor', (
+                                            SELECT COALESCE(json_agg(c), '[]'::json)
+                                            FROM (
+                                                SELECT cor, COUNT(*) AS quantidade
+                                                FROM produto
+                                                GROUP BY cor
+                                                ORDER BY quantidade DESC
+                                                ) c
+                                                ),
+                                                
+                                                'produtos_maior_quantidade', (
+                                                    SELECT COALESCE(json_agg(q), '[]'::json)
+                                                    FROM (
+                                                        SELECT nome, quantidade
+                                                        FROM produto
+                                                        ORDER BY quantidade DESC
+                                                        LIMIT 10
+                                                        ) q
+                                                        ),
+                                                        
+                                                        'produtos_maior_valor_estoque', (
+                                                            SELECT COALESCE(json_agg(v), '[]'::json)
+                                                            FROM (
+                                                                SELECT 
+                                                                nome,
+                                                                quantidade,
+                                                                preco,
+                                                                preco * quantidade AS valor_total
+                                                                FROM produto
+                                                                ORDER BY valor_total DESC
+                                                                LIMIT 10
+                                                                ) v
+                                                                )
+                                                                ) AS dashboard
+                                                                `);
+
+        res.json(result.rows[0].dashboard);
+    } catch (err) {
+        console.error(err.message);
+        res.status(500).json({ error: 'Erro ao buscar dados do dashboard' });
+    }
+});
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000');
 });
-
