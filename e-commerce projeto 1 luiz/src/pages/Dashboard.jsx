@@ -38,7 +38,7 @@ useEffect(() => {
   return (
     <div>
         <Navbar />
-        <GraficoProdutos dados={informacoes.produtos_maior_quantidade}/>
+        <GraficoProdutos dados={produtos_maior_quantidade}/>
     </div>
   )
 }

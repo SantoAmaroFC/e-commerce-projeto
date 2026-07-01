@@ -76,7 +76,7 @@ function CardProduto(prop) {
                 <p>tamanho: {prop.p.tamanho}</p>
                 <p>cor: {prop.p.cor}</p>
                 <p>descricao: {prop.p.descricao}</p>
-                <p>preco: {prop.p.preco}</p>
+                <p>preco: {prop.p.preco} R$</p>
                 <p>quantidade: {prop.p.quantidade}</p>
                 <button onClick={() => deletarProduto(prop.p.id)}>excluir</button>
                 <button onClick={() => setEditando(true)}>editar</button>

@@ -94,7 +94,7 @@ function Cadastro() {
       />
 
 <p className='cad-text'>Digite a Quantidade:</p>
-      <input type='Number' className='input-cad' placeholder='Digite o Nome do produto'
+      <input type='Number' className='input-cad' placeholder='Digite a Quantidade do produto'
         value = {inputQuantidade} onChange={(e) => setInputQuantidade((e.target.value))}
       />
 

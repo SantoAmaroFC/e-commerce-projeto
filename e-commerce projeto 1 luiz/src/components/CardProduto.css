@@ -1,6 +1,141 @@
-.card-Produtos{
+/* .card-Produtos{
     width: 200px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+} */
+
+/* Container Principal do Card */
+.card-Produtos {
+  background-color: #ffffff;
+  border-radius: 12px;
+  width: 320px;
+  padding: 24px;
+  margin: 15px;
+  box-shadow: 0 4px 15px rgba(0, 8, 20, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: var(--ink-black);
+  box-sizing: border-box;
+}
+
+/* Efeito Hover no Card */
+.card-Produtos:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px var(--sonbreamento-header);
+}
+
+/* --- MODO DE VISUALIZAÇÃO --- */
+
+/* Estilização dos textos (propriedades do produto) */
+.card-Produtos p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  border-bottom: 1px solid rgba(0, 8, 20, 0.05);
+  padding-bottom: 6px;
+}
+
+/* Destaque para o Nome do Produto (Primeiro parágrafo) */
+.card-Produtos p:first-of-type {
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--background-header);
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+/* Destacar o Preço especificamente (Penúltimo parágrafo antes dos botões) */
+.card-Produtos p:nth-last-of-type(2) {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--ink-black);
+  border-bottom: none;
+  margin-top: 12px;
+}
+
+/* --- MODO DE EDIÇÃO (FORMULÁRIO) --- */
+
+/* Rótulos dos inputs no modo edição */
+.card-Produtos div p {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #666;
+  margin: 8px 0 4px 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Estilização das caixas de texto/inputs */
+.card-Produtos input {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border: 1px solid var(--button-cad-color);
+  border-radius: 6px;
+  background-color: #fafafa;
+  color: var(--ink-black);
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+/* Foco no input */
+.card-Produtos input:focus {
+  outline: none;
+  border-color: var(--sonbreamento-header);
+  background-color: #ffffff;
+}
+
+/* --- BOTÕES DE AÇÃO --- */
+
+/* Base para todos os botões internos do card */
+.card-Produtos button {
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 15px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-size: 0.9rem;
+}
+
+.card-Produtos button:active {
+  transform: scale(0.96);
+}
+
+/* Botão Editar */
+.card-Produtos button:nth-of-type(2) {
+  background-color: var(--background-header);
+  color: var(--ink-black);
+}
+
+.card-Produtos button:nth-of-type(2):hover {
+  background-color: var(--sonbreamento-header);
+}
+
+/* Botão Excluir */
+.card-Produtos button:nth-of-type(1) {
+  background-color: #fce8e6;
+  color: #e53935;
+}
+
+.card-Produtos button:nth-of-type(1):hover {
+  background-color: #fbcbc7;
+}
+
+/* Botão Salvar Edição */
+.card-Produtos div button {
+  width: 100%;
+  background-color: var(--ink-black);
+  color: #ffffff;
+  margin-right: 0;
+  margin-top: 10px;
+}
+
+.card-Produtos div button:hover {
+  background-color: #00122e;
 }
