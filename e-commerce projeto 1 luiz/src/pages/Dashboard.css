@@ -29,3 +29,36 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-sizing: border-box;
   }
+
+  /* Container principal (section) */
+.cont-parag {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilização de cada item (parágrafo) */
+.cont-parag p {
+  flex: 1;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efeito sutil ao passar o mouse por cima */
+.cont-parag p:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-color: #0070f3; /* Cor de destaque (azul) ao focar */
+}

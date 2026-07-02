@@ -56,6 +56,13 @@ function Dashboard() {
   return (
     <div>
         <Navbar />
+
+        <section className="cont-parag">
+          <p>Quantidade total em estoque: {quantidade_total_estoque} itens</p>
+          <p>Quantidade total de produtos cadastrados: {total_itens_cadastrados} produtos</p>
+          <p>Valor total em estoque: {valor_total_estoque} R$</p>
+        </section>
+
         <section className="pagina">
 
         <div className="grafico" >
