@@ -1,0 +1,31 @@
+/* Container principal atualizado */
+.pagina {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os elementos da última linha */
+    gap: 24px;
+    padding: 32px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Ajuste no card para conversar melhor com o Flexbox */
+  .grafico {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    padding: 24px;
+    height: 400px;
+    /* Define a largura padrão ocupando cerca de 1/3 da tela (descontando o gap) */
+    flex: 1 1 calc(33.333% - 24px); 
+    /* Garante que os cards não fiquem gigantescos em telas ultra-wide */
+    max-width: 600px; 
+    /* Garante que eles não fiquem esmagados antes de quebrar de linha */
+    min-width: 450px; 
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+  }

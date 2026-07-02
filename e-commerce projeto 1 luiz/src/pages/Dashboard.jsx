@@ -2,7 +2,7 @@ import './Paginas.css'
 import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import axios from "axios"
-import GraficoProdutos from '../components/GraficoProdutos';
+import './Dashboard.css'
 import {
   BarChart,
   Bar,
@@ -56,7 +56,9 @@ function Dashboard() {
   return (
     <div>
         <Navbar />
-        <div style={{ width: '100%', height: 500, fontFamily: 'Arial, sans-serif' }}>
+        <section className="pagina">
+
+        <div className="grafico" >
       <h2 style={{ textAlign: 'center', color: '#333' }}>Produtos com maior quantidade</h2>
       
       <ResponsiveContainer width="100%" height="90%">
@@ -65,37 +67,37 @@ function Dashboard() {
           data={produtos_maior_quantidade} 
           layout="vertical"
           margin={{ top: 20, right: 30, left: 40, bottom: 5 }}
-        >
+          >
           <CartesianGrid strokeDasharray="3 3" horizontal={false} />
           
           <XAxis 
             type="number" 
             tick={{ fill: '#666' }}
-          />
+            />
           
           <YAxis 
             dataKey="nome" 
             type="category" 
             tick={{ fill: '#333', fontSize: 12 }}
             width={130}
-          />
+            />
           
           <Tooltip 
             cursor={{ fill: 'rgba(0, 0, 0, 0.05)' }}
             formatter={(value) => [`${value} unidades`, 'Quantidade']}
-          />
+            />
           
           <Bar dataKey="quantidade" radius={[0, 4, 4, 0]}>
             {/* 3. Mapeamos diretamente da prop 'dados' */}
             {produtos_maior_quantidade.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-            ))}
+              ))}
           </Bar>
         </BarChart>
       </ResponsiveContainer>
     </div>
     
-        <div style={{ width: '100%', height: 500, fontFamily: 'Arial, sans-serif' }}>
+        <div className="grafico">
       <h2 style={{ textAlign: 'center', color: '#333' }}>Produtos com maior valor de estoque</h2>
       
       <ResponsiveContainer width="100%" height="90%">
@@ -104,37 +106,37 @@ function Dashboard() {
           data={produtos_maior_valor_estoque} 
           layout="vertical"
           margin={{ top: 20, right: 30, left: 40, bottom: 5 }}
-        >
+          >
           <CartesianGrid strokeDasharray="3 3" horizontal={false} />
           
           <XAxis 
             type="number" 
             tick={{ fill: '#666' }}
-          />
+            />
           
           <YAxis 
             dataKey="nome" 
             type="category" 
             tick={{ fill: '#333', fontSize: 12 }}
             width={130}
-          />
+            />
           
           <Tooltip 
             cursor={{ fill: 'rgba(0, 0, 0, 0.05)' }}
             formatter={(value) => [`${value} unidades`, 'valor_total']}
-          />
+            />
           
           <Bar dataKey="valor_total" radius={[0, 4, 4, 0]}>
             {/* 3. Mapeamos diretamente da prop 'dados' */}
             {produtos_maior_valor_estoque.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-            ))}
+              ))}
           </Bar>
         </BarChart>
       </ResponsiveContainer>
     </div>
     
-        <div style={{ width: '100%', height: 500, fontFamily: 'Arial, sans-serif' }}>
+        <div className="grafico" >
       <h2 style={{ textAlign: 'center', color: '#333' }}>Produtos separados por cor</h2>
       
       <ResponsiveContainer width="100%" height="90%">
@@ -143,37 +145,37 @@ function Dashboard() {
           data={produtos_por_cor} 
           layout="vertical"
           margin={{ top: 20, right: 30, left: 40, bottom: 5 }}
-        >
+          >
           <CartesianGrid strokeDasharray="3 3" horizontal={false} />
           
           <XAxis 
             type="number" 
             tick={{ fill: '#666' }}
-          />
+            />
           
           <YAxis 
             dataKey="cor" 
             type="category" 
             tick={{ fill: '#333', fontSize: 12 }}
             width={130}
-          />
+            />
           
           <Tooltip 
             cursor={{ fill: 'rgba(0, 0, 0, 0.05)' }}
             formatter={(value) => [`${value} itens`, 'Quantidade']}
-          />
+            />
           
           <Bar dataKey="quantidade" radius={[0, 4, 4, 0]}>
             {/* 3. Mapeamos diretamente da prop 'dados' */}
             {produtos_por_cor.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-            ))}
+              ))}
           </Bar>
         </BarChart>
       </ResponsiveContainer>
     </div>
     
-        <div style={{ width: '100%', height: 500, fontFamily: 'Arial, sans-serif' }}>
+        <div className="grafico" >
       <h2 style={{ textAlign: 'center', color: '#333' }}>Produtos separados por tipo</h2>
       
       <ResponsiveContainer width="100%" height="90%">
@@ -182,37 +184,37 @@ function Dashboard() {
           data={produtos_por_tipo} 
           layout="vertical"
           margin={{ top: 20, right: 30, left: 40, bottom: 5 }}
-        >
+          >
           <CartesianGrid strokeDasharray="3 3" horizontal={false} />
           
           <XAxis 
             type="number" 
             tick={{ fill: '#666' }}
-          />
+            />
           
           <YAxis 
             dataKey="tipo" 
             type="category" 
             tick={{ fill: '#333', fontSize: 12 }}
             width={130}
-          />
+            />
           
           <Tooltip 
             cursor={{ fill: 'rgba(0, 0, 0, 0.05)' }}
             formatter={(value) => [`${value} unidades`, 'Quantidade']}
-          />
+            />
           
           <Bar dataKey="quantidade" radius={[0, 4, 4, 0]}>
             {/* 3. Mapeamos diretamente da prop 'dados' */}
             {produtos_por_tipo.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-            ))}
+              ))}
           </Bar>
         </BarChart>
       </ResponsiveContainer>
     </div>
     
-        <div style={{ width: '100%', height: 500, fontFamily: 'Arial, sans-serif' }}>
+        <div className="grafico" >
       <h2 style={{ textAlign: 'center', color: '#333' }}>Produtos com pouco estoque</h2>
       
       <ResponsiveContainer width="100%" height="90%">
@@ -221,42 +223,38 @@ function Dashboard() {
           data={produtos_pouco_estoque} 
           layout="vertical"
           margin={{ top: 20, right: 30, left: 40, bottom: 5 }}
-        >
+          >
           <CartesianGrid strokeDasharray="3 3" horizontal={false} />
           
           <XAxis 
             type="number" 
             tick={{ fill: '#666' }}
-          />
+            />
           
           <YAxis 
             dataKey="tipo"
             type="category" 
             tick={{ fill: '#333', fontSize: 12 }}
             width={130}
-          />
+            />
           
           <Tooltip 
             cursor={{ fill: 'rgba(0, 0, 0, 0.05)' }}
             formatter={(value) => [`${value} unidades`, 'Quantidade']}
-          />
+            />
           
           <Bar dataKey="quantidade" radius={[0, 4, 4, 0]}>
             {/* 3. Mapeamos diretamente da prop 'dados' */}
             {produtos_pouco_estoque.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-            ))}
+              ))}
           </Bar>
         </BarChart>
       </ResponsiveContainer>
     </div>
-    
-    
-    
+    </section>
     </div>
   )
 }
 
 export default Dashboard
-
-
