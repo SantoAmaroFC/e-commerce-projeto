@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom"; 
 import Home from "../pages/Home";
 import Cadastro from "../pages/Cadastro";
-import Cadastroconta from "../pages/Cadastroconta";
 import Dashboard from "../pages/Dashboard";
 
 
