@@ -7,11 +7,11 @@ function Cadastro() {
   return (
 
     <div>
-      <Navbar />
+      {/* Componente de navegação (menu superior do sistema) */}
+      <Navbar /> 
+      {/* Componente responsável pelo formulário de cadastro de produtos */}                     
       <Cadastros />
-      <p>
-
-      </p>
+      
 
     </div>
   )

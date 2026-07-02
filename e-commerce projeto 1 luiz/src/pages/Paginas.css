@@ -1,24 +1,24 @@
 .cont-home{
-    flex: 1;
+    flex: 1; /* ocupa todo espaço disponível na tela */
 }
 .cont-cadastro{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
+    flex: 1; /* ocupa o espaço restante */
+    display: flex; /* ativa flexbox */
+    align-items: center; /* centraliza verticalmente */
+    justify-content: center; /* centraliza horizontalmente */
+    flex-direction: column; /* organiza itens em coluna */
+    gap: 10px; /* espaçamento entre os elementos */
 }
 .propaganda{
-    display: flex;
-    height: 90vh;
-    width: 99vw;
-    margin: 0;
+    display: flex; /* ativa flexbox */
+    height: 90vh; /* ocupa quase toda altura da tela */
+    width: 99vw; /* quase toda largura da tela */
+    margin: 0; /* remove espaçamento externo */
   }
 .cont-produtos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; 
-    flex-wrap: wrap;
+    display: flex; /* ativa flexbox */
+    justify-content: center; /* centraliza os cards */
+    align-items: center; /* alinha verticalmente */
+    gap: 10px; /* espaço entre os produtos */
+    flex-wrap: wrap; /* quebra linha quando não cabe mais itens */
 }

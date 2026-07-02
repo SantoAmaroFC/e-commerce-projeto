@@ -1,98 +1,91 @@
 .cont-app{
 
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--background-header);
-  text-align: center
+  min-height: 100vh; /* ocupa altura total da tela */
+  display: flex; /* adiciona a flexbox */
+  flex-direction: column; /* organiza header + main em coluna */
+  background-color: var(--background-header); /* cor vinda da root no indexx css  */
+  text-align: center  /* centraliza textos */
 }
 
 .cont-header{
-  background-color: var(--background-header);
-  height: 100px;
-  display: flex;
- box-shadow: 0px 4px 6px var(--sonbreamento-header);
- position: relative;
-  z-index: 1000;
-  text-align: center;
+  background-color: var(--background-header); /* cor vinda da root no indexx css  */
+  height: 100px;  /* altura fixa */
+  display: flex; /* flexbox */
+ box-shadow: 0px 4px 6px var(--sonbreamento-header); /* cor vinda da root no indexx css  */
+ position: relative; /* permite controle de z-index */
+  z-index: 1000; /* fica acima dos outros elementos */
+  text-align: center; /* centraliza texto */
  
-  justify-content: center;
-  align-items:center;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items:center; /* centraliza verticalmente */
 }
 .cont-header nav{
-  display: flex;
-  gap:150px; 
+  display: flex; /* organiza itens em linha */
+  gap:150px;   /* espaço grande entre botões */
   
 }
 
 .cont-main{
-  background-color: var(--background-main);
-  flex: 1;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  background-color: var(--background-main); /* cor vinda da root no indexx css  */
+  flex: 1; /* ocupa todo espaço restante da tela */
+  display: flex; /* adiciona um flexbox */
+  align-items: center; /* centraliza verticalmente */
+  flex-direction: column; /* organiza em coluna */
+  justify-content: center; /* centraliza horizontalmente */
   
 }
 .botoes-nav{
-  border: none;
-  padding: 8px 14px;
-  font-size: 16px;
-  border-radius: 8px;
-  background-color: var(--botoes-nav);
-  cursor: pointer;
-  background: none;
+  border: none; /* remove borda padrão */
+  padding: 8px 14px; /* espaçamento interno */
+  font-size: 16px; /* tamanho do texto */
+  border-radius: 8px;  /* bordas arredondadas */
+  background-color: var(--botoes-nav); /* cor vinda da root no indexx css  */
+  cursor: pointer; /* cursor de clique */
+  background: none; /* remove fundo padrão */
 }
 .logo{
-  display: flex;
-  height: 100px;
-  width: 150px;
+  display: flex; /* flexbox */
+  height: 100px; /* altura da logo */
+  width: 150px; /* largura da logo */
 }
 .botao-cad{
   display: flex;
   flex-direction: column;
 }
 .tipo{
-  display: flex;
-  flex-direction: column;
+  display: flex; /* flexbox */
+  flex-direction: column; /* organiza em coluna */
 }
 .nome-produto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* flexbox */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    justify-content: center; /* centraliza horizontalmente */
 }
-
-
-
-
-
-
 
 .input-cad {
-  width: 100%;
-  padding: 12px 14px;
-  border: 2px solid var(--button-cad-color);
-  border-radius: 20px;
-  font-size: 16px;
-  outline: none;
-  transition: 0.3s;
-  cursor: pointer;
-  
-  
-}
+  width: 100%; /* ocupa toda largura disponível */
+  padding: 12px 14px; /* espaçamento interno */
+  border: 2px solid var(--button-cad-color); /* cor vinda da root no indexx css  */
+  border-radius: 20px;  /* bordas arredondadas */
+  font-size: 16px; /* tamanho da fonte */
+  outline: none; /* remove contorno padrão do navegador */
+  transition: 0.3s;  /* animação suave ao interagir */
+  cursor: pointer; /* cursor de clique */
 
+}
 
 .input-cad:focus {
-  border-color: var(--button-cad-bordercolor);
-  box-shadow: 0 0 0 3px var(--sobreamento-cad);
+  border-color: var(--button-cad-bordercolor); /* cor vinda da root no indexx css  */
+  box-shadow: 0 0 0 3px var(--sobreamento-cad); /* cor vinda da root no indexx css  */
+
 }
 .cad-text{
-  font-size: 20px;
-  line-height: 1.5;
-  color: var(--button-text-color);
-  max-width: 500px;
-  margin-bottom: 10px;
+  font-size: 20px; /* tamanho do texto */
+  line-height: 1.5; /* espaçamento entre linhas */
+  color: var(--button-text-color); /* cor do texto */
+  max-width: 500px; /* limita largura do texto */
+  margin-bottom: 10px;  /* espaço abaixo */
 }
 
 

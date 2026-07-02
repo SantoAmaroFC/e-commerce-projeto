@@ -1,25 +1,26 @@
+/* Reset global: remove espaçamentos padrão de todos os elementos */
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* remove margem padrão */
+  padding: 0; /* remove padding padrão */
+  box-sizing: border-box; /* inclui bordas e padding no tamanho total do elemento */
 
 }
-
+/* Define altura mínima da aplicação e cor de fundo geral */
 html, body, #root{
-  min-height: 100vh;
-  background-color: #e9ecef;
+  min-height: 100vh; /* ocupa altura total da tela */
+  background-color: #e9ecef; /* cor de fundo padrão */
 }
 
 :root{
 
---ink-black: #000814ff;
---botoes-nav: #e9eaecff;
---background-main:  #e9eaecff;
---sonbreamento-header: #e4b61aff;
---background-header: #fbe134ff;
---button-cad-color: #ddd;
---button-cad-bordercolor: #4f46e5;
---button-text-color: #000000;
---sobreamento-cad: rgba(79, 70, 229, 0.2);
+--ink-black: #000814ff; /* preto principal do sistema */
+--botoes-nav: #e9eaecff; /* cor dos botões de navegação */
+--background-main:  #e9eaecff; /* fundo da área principal */
+--sonbreamento-header: #e4b61aff; /* cor da sombra do header */
+--background-header: #fbe134ff; /* cor do header */
+--button-cad-color: #ddd;  /* cor da borda dos inputs */
+--button-cad-bordercolor: #4f46e5; /* cor da borda quando foco no input */
+--button-text-color: #000000; /* cor padrão dos textos */
+--sobreamento-cad: rgba(79, 70, 229, 0.2); /* sombra azul do input em foco */
 }
 
