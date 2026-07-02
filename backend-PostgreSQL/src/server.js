@@ -9,10 +9,10 @@ const pool = new Pool({
     // user: 'senai', // Substitua pelo seu usuário do PostgreSQL
     host: 'localhost',
     database: 'AURA_OUTFIT', // Nome da sua database
-    password: 'senai', // Substitua pela sua senha
-    // password: 'luan', // Substitua pela sua senha
-    port: 5433, // Porta padrão do PostgreSQLx
-    // port: 5432, // Porta padrão do PostgreSQLx
+    // password: 'senai', // Substitua pela sua senha
+    password: 'luan', // Substitua pela sua senha
+    // port: 5433, // Porta padrão do PostgreSQLx
+    port: 5432, // Porta padrão do PostgreSQLx
 });
 
 // Habilitar CORS para todas as rotas
