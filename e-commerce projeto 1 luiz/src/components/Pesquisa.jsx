@@ -6,7 +6,7 @@ function Pesquisa() {
     <div>
 
     <input type="text" className='pesquisa' placeholder='Digite o tipo'
-            onChange={(e) => setPesquisa((e.target.value))} 
+            onChange={(e) => setPesquisa((e.target.value))}                                                    /*ESSE AQUI POR ENQUANTO NAO SERVE PARA NADA*/   
         />
 
     </div>

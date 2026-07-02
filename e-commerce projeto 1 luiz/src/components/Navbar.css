@@ -1,49 +1,49 @@
 .nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    min-width: 100vw;
+    display: flex; /* Utiliza Flexbox para organizar os elementos */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 25px;  /* Espaçamento entre os itens da navegação */
+    min-width: 100vw; /* Faz a barra ocupar toda a largura da janela */
 
-    background-color: var(--background-header);
-    height: 100px;
-    display: flex;
-    box-shadow: 0px 4px 6px var(--sonbreamento-header);
-    position: relative;
-    z-index: 1000;
-    text-align: center;
-    opacity: 1.0;
+    background-color: var(--background-header);    /* Define a cor de fundo utilizando uma variável CSS */
+    height: 100px; /* Define a altura da barra de navegação */
+    display: flex;  /* Utiliza Flexbox para organizar os elementos */
+    box-shadow: 0px 4px 6px var(--sonbreamento-header); /* Adiciona uma sombra abaixo da barra */
+    position: relative; /* Permite posicionamento relativo para elementos internos */
+    z-index: 1000; /* Mantém a barra acima de outros elementos */
+    text-align: center; /* Centraliza o texto */
+    opacity: 1.0;   /* Define a opacidade da barra */
 
-    justify-content: center;
-    align-items:center;
+    justify-content: center; justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items:center; align-items: center; /* Centraliza os itens verticalmente */
 
 }
 a{
-    text-decoration: none;
+    text-decoration: none;  /* Remove o sublinhado padrão dos links */
 }
 .botoes-nav{
-    border: 1px solid rgb(233, 214, 41);
-    background-color: transparent; 
-    cursor: pointer;
-    border-radius: 50px;
-    background-color: #F4DF2A;
-    height: 30px;
-    width: 180px;
-    padding: 6px;
-    margin: 10px; 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 1px solid rgb(233, 214, 41);  /* Define a borda do botão */
+    background-color: transparent;  /* Cor de fundo do botão */
+    cursor: pointer;  /* Altera o cursor para indicar que é clicável */
+    border-radius: 50px; /* Arredonda completamente os cantos */
+    background-color: #F4DF2A; /* Cor de fundo do botão */
+    height: 30px;/* Define a altura do botão */
+    width: 180px; /* Define a largura do botão */
+    padding: 6px;  /* Espaçamento interno */
+    margin: 10px; /* Espaçamento externo */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  /* Fonte utilizada no botão */
 }
 .botoes-nav:hover{
-    background: rgb(233, 214, 41)
+    background: rgb(233, 214, 41) /* Altera levemente a cor de fundo */
 }
 .botoes-nav:visited{
-    color: black;
+    color: black;  /* Define a cor do texto após visitar o link */
 }
 .botoes-nav:active{
-    color: rgb(67, 67, 67);
+    color: rgb(67, 67, 67);  /* Altera a cor do texto enquanto o botão está pressionado */
 }
 .logo{
-    display: flex;
-    height: 100px;
-    width: 150px;
+    display: flex;   /* Utiliza Flexbox */
+    height: 100px;  /* Define a altura da imagem da logo */
+    width: 150px; /* Define a largura da imagem da logo */
 }

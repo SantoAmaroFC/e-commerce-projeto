@@ -6,7 +6,7 @@ const VisuallyHiddenInput = styled('input')({
   clip: 'rect(0 0 0 0)',
   clipPath: 'inset(50%)',
   height: 1,
-  overflow: 'hidden',
+  overflow: 'hidden',                                                     
   position: 'absolute',
   bottom: 0,
   left: 0,
@@ -20,8 +20,8 @@ export default function Upload() {
       component="label"
       variant="contained"
       startIcon={<CloudUploadIcon />}
-    >
-      Upload foto
+    >                                                                        {/*ESSE AQUI POR ENQUANTO NAO SERVE PARA NADA*/}   
+      Upload foto                         
       <VisuallyHiddenInput
         type="file"
         multiple

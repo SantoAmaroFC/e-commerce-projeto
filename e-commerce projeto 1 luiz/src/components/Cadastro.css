@@ -1,64 +1,64 @@
 body {
-    margin: 0;
+    margin: 0; /* Remove margens e espaçamentos padrões do navegador */    
     padding: 0;
-    background-color: #f4f6f9;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;  /* Define a cor de fundo da página */
+    font-family: Arial, Helvetica, sans-serif;  /* Define a fonte padrão utilizada em todo o site */
   }
   
   .cont-cadastro {
-    width: 450px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 450px;  /* Define a largura do cadastro */
+    margin: 40px auto;  /* Centraliza o Cadastro horizontalmente e adiciona margem superior */
+    padding: 30px; /* Espaçamento interno do cadastro */
+    background-color: #fff;   /* Cor de fundo branca */
+    border-radius: 12px;  /* Arredonda os cantos do cadastro */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Adiciona sombra ao redor do cadastro */
   
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: flex;  /* Utiliza Flexbox para organizar os elementos */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    gap: 10px; /* Espaçamento entre os elementos */
   }
   
   .cad-text {
-    font-size: 15px;
-    font-weight: 600;
-    color: #333;
-    margin: 5px 0;
+    font-size: 15px;  /* Define o tamanho da fonte */
+    font-weight: 600;   /* Deixa o texto em seminegrito */
+    color: #333;   /* Cor do texto */
+    margin: 5px 0;   /* Espaçamento acima e abaixo do texto */
   }
   
   .input-cad {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-    box-sizing: border-box;
-    transition: 0.3s;
+    width: 100%; /* Faz o campo ocupar toda a largura disponível */
+    padding: 12px;  /* Espaçamento interno */
+    border: 1px solid #ccc;  /* Define a borda */
+    border-radius: 8px; /* Arredonda os cantos */
+    font-size: 14px; /* Tamanho da fonte */
+    box-sizing: border-box;  /* Inclui padding e borda no cálculo da largura */
+    transition: 0.3s;  /* Cria uma animação suave nas alterações */
   }
   
   .input-cad:focus {
-    outline: none;
-    border-color: #4a90e2;
-    box-shadow: 0 0 5px rgba(74, 144, 226, 0.4);
+    outline: none; /* Remove a borda padrão do navegador */
+    border-color: #4a90e2; /* Altera a cor da borda */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.4); /* Adiciona uma sombra azul ao redor */
   }
   
   select.input-cad {
-    cursor: pointer;
+    cursor: pointer;  /* Altera o cursor para indicar seleção */
   }
   
   button.input-cad {
-    margin-top: 15px;
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+    margin-top: 15px;  /* Espaçamento acima do botão */
+    background-color: #4a90e2;     /* Cor de fundo */
+    color: white;   /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Altera o cursor para mãozinha */
+    transition: 0.3s;  /* Animação suave */
   }
   
   button.input-cad:hover {
-    background-color: #357abd;
+    background-color: #357abd;  /* Escurece o botão */
   }
   
   button.input-cad:active {
-    transform: scale(0.98);
+    transform: scale(0.98); /* Diminui levemente o tamanho do botão com animação */
   }

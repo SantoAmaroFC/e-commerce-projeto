@@ -8,10 +8,13 @@ export const GlobalContextProvider = ({children}) => {
     
 
     return(
+        // Disponibiliza os estados e funções para todos
+        // os componentes filhos da aplicação.
         <GlobalContext.Provider value={{
                 // usuario, setUsuario,
                 
             }}>
+{/* Componentes que terão acesso ao contexto */}
             {children}
         </GlobalContext.Provider>
     )
