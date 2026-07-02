@@ -72,8 +72,8 @@ import {
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8', '#82ca9d', '#ffc658', '#a4de6c', '#d0ed57', '#83a6ed'];
 
 // 1. Use diretamente a prop 'dados'. Se 'dados' for undefined/nulo inicialmente, definimos um array vazio [] por segurança.
-export default function GraficoProdutos({ dados = [] }) {
-  
+export default function GraficoProdutos({ dados = [], titulo }) {
+ console.log(dados)
   // SE você precisar garantir que o Recharts não quebre caso os dados demorem a chegar:
   if (!dados || dados.length === 0) {
     return <div style={{ textAlign: 'center', padding: '20px' }}>Carregando dados do gráfico...</div>;
@@ -81,7 +81,7 @@ export default function GraficoProdutos({ dados = [] }) {
 
   return (
     <div style={{ width: '100%', height: 500, fontFamily: 'Arial, sans-serif' }}>
-      <h2 style={{ textAlign: 'center', color: '#333' }}>Produtos com Maior Quantidade</h2>
+      <h2 style={{ textAlign: 'center', color: '#333' }}>{titulo}</h2>
       
       <ResponsiveContainer width="100%" height="90%">
         {/* 2. Passamos 'dados' diretamente para o BarChart */}

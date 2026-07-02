@@ -9,10 +9,10 @@ const pool = new Pool({
     // user: 'senai', // Substitua pelo seu usuário do PostgreSQL
     host: 'localhost',
     database: 'AURA_OUTFIT', // Nome da sua database
-    // password: 'senai', // Substitua pela sua senha
-    password: 'luan', // Substitua pela sua senha
-    // port: 5433, Porta padrão do PostgreSQLx
-    port: 5432, // Porta padrão do PostgreSQLx
+    password: 'senai', // Substitua pela sua senha
+    // password: 'luan', // Substitua pela sua senha
+    port: 5433, // Porta padrão do PostgreSQLx
+    // port: 5432, // Porta padrão do PostgreSQLx
 });
 
 // Habilitar CORS para todas as rotas
@@ -121,9 +121,9 @@ app.get('/dashboard', async (req, res) => {
                         'produtos_pouco_estoque', (
                             SELECT COALESCE(json_agg(p), '[]'::json)
                             FROM (
-                                SELECT id, nome, tipo, tamanho, cor, preco, quantidade
+                                SELECT id, nome, tipo, quantidade
                                 FROM produto
-                                WHERE quantidade <= 5
+                                WHERE quantidade <= 15
                                 ORDER BY quantidade ASC
                                 ) p
                                 ),
@@ -135,6 +135,7 @@ app.get('/dashboard', async (req, res) => {
                                         FROM produto
                                         GROUP BY tipo
                                         ORDER BY quantidade DESC
+                                        LIMIT 10
                                         ) t
                                         ),
                                         
@@ -145,6 +146,7 @@ app.get('/dashboard', async (req, res) => {
                                                 FROM produto
                                                 GROUP BY cor
                                                 ORDER BY quantidade DESC
+                                                LIMIT 10
                                                 ) c
                                                 ),
                                                 
@@ -163,8 +165,6 @@ app.get('/dashboard', async (req, res) => {
                                                             FROM (
                                                                 SELECT 
                                                                 nome,
-                                                                quantidade,
-                                                                preco,
                                                                 preco * quantidade AS valor_total
                                                                 FROM produto
                                                                 ORDER BY valor_total DESC
