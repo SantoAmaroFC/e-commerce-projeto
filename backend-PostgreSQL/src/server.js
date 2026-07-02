@@ -9,10 +9,10 @@ const pool = new Pool({
     // user: 'senai', // Substitua pelo seu usuário do PostgreSQL
     host: 'localhost',
     database: 'AURA_OUTFIT', // Nome da sua database
-    // password: 'senai', // Substitua pela sua senha
-    password: 'luan', // Substitua pela sua senha
-    // port: 5433, // Porta padrão do PostgreSQLx
-    port: 5432, // Porta padrão do PostgreSQLx
+    password: 'senai', // Substitua pela sua senha
+    // password: 'luan', // Substitua pela sua senha
+    port: 5433, // Porta padrão do PostgreSQLx
+    // port: 5432, // Porta padrão do PostgreSQLx
 });
 
 // Habilitar CORS para todas as rotas
@@ -103,76 +103,77 @@ app.get('/dashboard', async (req, res) => {
     try {
         const result = await pool.query(`
         SELECT json_build_object(
-            'total_itens_cadastrados', (
-                SELECT COUNT(*) 
-                FROM produto
-                ),
+        'total_itens_cadastrados', (
+        SELECT COUNT(*) 
+        FROM produto
+        ),
                 
-                'quantidade_total_estoque', (
-                    SELECT COALESCE(SUM(quantidade), 0) 
-                    FROM produto
-                    ),
+        'quantidade_total_estoque', (
+        SELECT COALESCE(SUM(quantidade), 0) 
+        FROM produto
+        ),
                     
-                    'valor_total_estoque', (
-                        SELECT COALESCE(SUM(preco * quantidade), 0) 
-                        FROM produto
-                        ),
+        'valor_total_estoque', (
+        SELECT COALESCE(SUM(preco * quantidade), 0) 
+        FROM produto
+        ),
                         
-                        'produtos_pouco_estoque', (
-                            SELECT COALESCE(json_agg(p), '[]'::json)
-                            FROM (
-                                SELECT id, nome, tipo, quantidade
-                                FROM produto
-                                WHERE quantidade <= 15
-                                ORDER BY quantidade ASC
-                                ) p
-                                ),
+        'produtos_pouco_estoque', (
+        SELECT COALESCE(json_agg(p), '[]'::json)
+        FROM (
+        SELECT id, nome, tipo, quantidade
+        FROM produto
+        WHERE quantidade <= 15
+        ORDER BY quantidade ASC
+        LIMIT 10
+        ) p
+        ),
                                 
-                                'produtos_por_tipo', (
-                                    SELECT COALESCE(json_agg(t), '[]'::json)
-                                    FROM (
-                                        SELECT tipo, COUNT(*) AS quantidade
-                                        FROM produto
-                                        GROUP BY tipo
-                                        ORDER BY quantidade DESC
-                                        LIMIT 10
-                                        ) t
-                                        ),
+        'produtos_por_tipo', (
+        SELECT COALESCE(json_agg(t), '[]'::json)
+        FROM (
+        SELECT tipo, COUNT(*) AS quantidade
+        FROM produto
+        GROUP BY tipo
+        ORDER BY quantidade DESC
+        LIMIT 10
+        ) t
+        ),
                                         
-                                        'produtos_por_cor', (
-                                            SELECT COALESCE(json_agg(c), '[]'::json)
-                                            FROM (
-                                                SELECT cor, COUNT(*) AS quantidade
-                                                FROM produto
-                                                GROUP BY cor
-                                                ORDER BY quantidade DESC
-                                                LIMIT 10
-                                                ) c
-                                                ),
-                                                
-                                                'produtos_maior_quantidade', (
-                                                    SELECT COALESCE(json_agg(q), '[]'::json)
-                                                    FROM (
-                                                        SELECT nome, quantidade
-                                                        FROM produto
-                                                        ORDER BY quantidade DESC
-                                                        LIMIT 10
-                                                        ) q
-                                                        ),
+        'produtos_por_cor', (
+        SELECT COALESCE(json_agg(c), '[]'::json)
+        FROM (
+        SELECT cor, COUNT(*) AS quantidade
+        FROM produto
+        GROUP BY cor
+        ORDER BY quantidade DESC
+        LIMIT 10
+        ) c
+        ),
+                                
+        'produtos_maior_quantidade', (
+        SELECT COALESCE(json_agg(q), '[]'::json)
+        FROM (
+        SELECT nome, quantidade
+        FROM produto
+        ORDER BY quantidade DESC
+        LIMIT 10
+        ) q
+        ),
                                                         
-                                                        'produtos_maior_valor_estoque', (
-                                                            SELECT COALESCE(json_agg(v), '[]'::json)
-                                                            FROM (
-                                                                SELECT 
-                                                                nome,
-                                                                preco * quantidade AS valor_total
-                                                                FROM produto
-                                                                ORDER BY valor_total DESC
-                                                                LIMIT 10
-                                                                ) v
-                                                                )
-                                                                ) AS dashboard
-                                                                `);
+        'produtos_maior_valor_estoque', (
+        SELECT COALESCE(json_agg(v), '[]'::json)
+        FROM (
+        SELECT 
+        nome,
+        preco * quantidade AS valor_total
+        FROM produto
+        ORDER BY valor_total DESC
+        LIMIT 10
+        ) v
+        )
+        ) AS dashboard
+        `);
 
         res.json(result.rows[0].dashboard);
     } catch (err) {
