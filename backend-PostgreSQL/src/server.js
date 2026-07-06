@@ -125,7 +125,7 @@ app.get('/dashboard', async (req, res) => {
         FROM produto
         WHERE quantidade <= 15
         ORDER BY quantidade ASC
-        LIMIT 10
+        LIMIT 20
         ) p
         ),
                                 

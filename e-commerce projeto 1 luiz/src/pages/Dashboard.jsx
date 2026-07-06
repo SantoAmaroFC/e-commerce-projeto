@@ -1,4 +1,5 @@
 import './Paginas.css'
+import React from 'react';
 import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import axios from "axios"
@@ -221,44 +222,36 @@ function Dashboard() {
       </ResponsiveContainer>
     </div>
     
-        <div className="grafico" >
-      <h2 style={{ textAlign: 'center', color: '#333' }}>Produtos com pouco estoque</h2>
-      
-      <ResponsiveContainer width="100%" height="90%">
-        {/* 2. Passamos 'dados' diretamente para o BarChart */}
-        <BarChart
-          data={produtos_pouco_estoque} 
-          layout="vertical"
-          margin={{ top: 20, right: 30, left: 40, bottom: 5 }}
-          >
-          <CartesianGrid strokeDasharray="3 3" horizontal={false} />
-          
-          <XAxis 
-            type="number" 
-            tick={{ fill: '#666' }}
-            />
-          
-          <YAxis 
-            dataKey="tipo"
-            type="category" 
-            tick={{ fill: '#333', fontSize: 12 }}
-            width={130}
-            />
-          
-          <Tooltip 
-            cursor={{ fill: 'rgba(0, 0, 0, 0.05)' }}
-            formatter={(value) => [`${value} unidades`, 'Quantidade']}
-            />
-          
-          <Bar dataKey="quantidade" radius={[0, 4, 4, 0]}>
-            {/* 3. Mapeamos diretamente da prop 'dados' */}
-            {produtos_pouco_estoque.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-              ))}
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
-    </div>
+    <div className="lista">
+  <h2 style={{ textAlign: "center", color: "#333" }}>
+    Produtos com pouco estoque
+  </h2>
+
+  <div className="lista-produtos">
+    {produtos_pouco_estoque.length > 0 ? (
+      produtos_pouco_estoque.map((produto, index) => (
+        <div
+          key={index}
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            padding: "12px 16px",
+            marginBottom: "10px",
+            borderRadius: "8px",
+            backgroundColor: "#f8f9fa",
+            borderLeft: `6px solid ${COLORS[index % COLORS.length]}`,
+          }}
+        >
+          <h5>{produto.tipo}</h5>
+          <h5>{produto.quantidade} unidades</h5>
+        </div>
+      ))
+    ) : (
+      <p>Nenhum produto com pouco estoque.</p>
+    )}
+  </div>
+</div>
     </section>
     </div>
   )
