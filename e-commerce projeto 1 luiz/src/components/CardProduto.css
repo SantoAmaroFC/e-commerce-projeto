@@ -1,134 +1,134 @@
 /* Container Principal do Card */
 .card-Produtos {
-  background-color: #ffffff;
-  border-radius: 12px;
-  width: 320px;
-  padding: 24px;
-  margin: 15px;
-  box-shadow: 0 4px 15px rgba(0, 8, 20, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  color: var(--ink-black);
-  box-sizing: border-box;
+  background-color: #ffffff; /*Define a cor de fundo*/
+  border-radius: 12px; /* Arredonda os cantos */
+  width: 320px; /* Largura fixa do card */
+  padding: 24px; /* Espaçamento interno */
+  margin: 15px; /* Espaçamento externo */
+  box-shadow: 0 4px 15px rgba(0, 8, 20, 0.08); /* Sombra do card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Anima movimentação e sombra */
+  font-family: 'Segoe UI', Roboto, sans-serif; /* Fonte utilizada */
+  color: var(--ink-black); /* Cor padrão do texto */
+  box-sizing: border-box; /* Inclui padding e borda na largura */
 }
 
 /* Efeito Hover no Card */
 .card-Produtos:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px var(--sonbreamento-header);
+  transform: translateY(-4px); /* Move o card 4px para cima */
+  box-shadow: 0 8px 25px var(--sonbreamento-header); /* Intensifica a sombra */
 }
 
 /* --- MODO DE VISUALIZAÇÃO --- */
 
 /* Estilização dos textos (propriedades do produto) */
 .card-Produtos p {
-  margin: 8px 0;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  border-bottom: 1px solid rgba(0, 8, 20, 0.05);
-  padding-bottom: 6px;
+  margin: 8px 0; /* Espaçamento entre os textos */
+  font-size: 0.95rem; /* Tamanho da fonte */
+  line-height: 1.4; /* Espaçamento entre linhas */
+  border-bottom: 1px solid rgba(0, 8, 20, 0.05); /* Linha separadora */
+  padding-bottom: 6px; /* Distância entre o texto e a linha */
 }
 
 /* Destaque para o Nome do Produto (Primeiro parágrafo) */
 .card-Produtos p:first-of-type {
-  font-size: 1.3rem;
-  font-weight: 700;
-  border-bottom: 2px solid var(--background-header);
-  padding-bottom: 8px;
-  margin-bottom: 15px;
+  font-size: 1.3rem; /* Fonte maior */
+  font-weight: 700; /* Negrito */
+  border-bottom: 2px solid var(--background-header); /* Linha de destaque */
+  padding-bottom: 8px; 
+  margin-bottom: 15px; 
 }
 
 /* Destacar o Preço especificamente (Penúltimo parágrafo antes dos botões) */
 .card-Produtos p:nth-last-of-type(2) {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: var(--ink-black);
-  border-bottom: none;
-  margin-top: 12px;
+  font-size: 1.2rem; /* Fonte maior */
+  font-weight: 800; /* Negrito forte */
+  color: var(--ink-black); /* Cor do texto */
+  border-bottom: none; /* Remove a linha inferior */
+  margin-top: 12px; 
 }
 
 /* --- MODO DE EDIÇÃO (FORMULÁRIO) --- */
 
 /* Rótulos dos inputs no modo edição */
 .card-Produtos div p {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #666;
-  margin: 8px 0 4px 0;
+  font-size: 0.8rem; /* Fonte menor */
+  text-transform: uppercase; /* Texto em maiúsculas */
+  font-weight: bold; /* Negrito */
+  color: #666; /* Cor cinza */
+  margin: 8px 0 4px 0; 
   border-bottom: none;
   padding-bottom: 0;
 }
 
 /* Estilização das caixas de texto/inputs */
 .card-Produtos input {
-  width: 100%;
-  padding: 8px 12px;
-  margin-bottom: 10px;
-  border: 1px solid var(--button-cad-color);
-  border-radius: 6px;
-  background-color: #fafafa;
-  color: var(--ink-black);
+  width: 100%; /* Ocupa toda a largura */
+  padding: 8px 12px; /* Espaçamento interno */
+  margin-bottom: 10px; /* Espaço abaixo */
+  border: 1px solid var(--button-cad-color); /* Cor da borda */
+  border-radius: 6px; /* Cantos arredondados */
+  background-color: #fafafa; /* Fundo cinza claro */
+  color: var(--ink-black); /* Cor do texto */
   font-size: 0.95rem;
   box-sizing: border-box;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease; /* Anima mudança da borda */
 }
 
 /* Foco no input */
 .card-Produtos input:focus {
-  outline: none;
-  border-color: var(--sonbreamento-header);
-  background-color: #ffffff;
+  outline: none; /* Remove a borda padrão do navegador */
+  border-color: var(--sonbreamento-header); /* Destaca a borda */
+  background-color: #ffffff; /* Fundo branco */
 }
 
 /* --- BOTÕES DE AÇÃO --- */
 
 /* Base para todos os botões internos do card */
 .card-Produtos button {
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 16px;
-  cursor: pointer;
-  margin-right: 10px;
+  font-weight: bold; /* Texto em negrito */
+  border: none; /* Remove borda */
+  border-radius: 6px; /* Cantos arredondados */
+  padding: 10px 16px; /* Espaçamento interno */
+  cursor: pointer; /* Cursor de clique */
+  margin-right: 10px; 
   margin-top: 15px;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease; /* Animações */
   font-size: 0.9rem;
 }
 
 .card-Produtos button:active {
-  transform: scale(0.96);
+  transform: scale(0.96); /* Diminui levemente o botão */
 }
 
 /* Botão Editar */
 .card-Produtos button:nth-of-type(2) {
-  background-color: var(--background-header);
-  color: var(--ink-black);
+  background-color: var(--background-header);  /* Cor de fundo */ 
+  color: var(--ink-black); /* Cor do texto */
 }
 
 .card-Produtos button:nth-of-type(2):hover {
-  background-color: var(--sonbreamento-header);
+  background-color: var(--sonbreamento-header); /* Cor ao passar o mouse */
 }
 
 /* Botão Excluir */
 .card-Produtos button:nth-of-type(1) {
-  background-color: #fce8e6;
-  color: #e53935;
+  background-color: #fce8e6; /* Vermelho claro */
+  color: #e53935; /* Texto vermelho */
 }
 
 .card-Produtos button:nth-of-type(1):hover {
-  background-color: #fbcbc7;
+  background-color: #fbcbc7; /* Cor ao passar o mouse */
 }
 
 /* Botão Salvar Edição */
 .card-Produtos div button {
-  width: 100%;
-  background-color: var(--ink-black);
-  color: #ffffff;
+  width: 100%; /* Ocupa toda a largura */
+  background-color: var(--ink-black); /* Fundo escuro */
+  color: #ffffff; /* Texto branco */
   margin-right: 0;
   margin-top: 10px;
 }
 
 .card-Produtos div button:hover {
-  background-color: #00122e;
+  background-color: #00122e; /* Cor ao passar o mouse */
 }

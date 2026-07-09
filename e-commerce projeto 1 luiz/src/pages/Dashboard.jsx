@@ -243,7 +243,7 @@ function Dashboard() {
             borderLeft: `6px solid ${COLORS[index % COLORS.length]}`,
           }}
         >
-          <h5>{produto.tipo}</h5>
+          <h5>Nome: {produto.nome}; Tipo: {produto.tipo} →</h5>
           <h5>{produto.quantidade} unidades</h5>
         </div>
       ))

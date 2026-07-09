@@ -33,6 +33,7 @@ body {
     font-size: 14px; /* Tamanho da fonte */
     box-sizing: border-box;  /* Inclui padding e borda no cálculo da largura */
     transition: 0.3s;  /* Cria uma animação suave nas alterações */
+    text-transform: capitalize; /* Deixa a primeira letra em maiuscula */
   }
   
   .input-cad:focus {

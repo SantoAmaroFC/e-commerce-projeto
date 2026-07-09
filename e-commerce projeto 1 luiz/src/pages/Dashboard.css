@@ -8,53 +8,53 @@
 
 /* Reset básico para o fundo da página */
 body {
-  background-color: var(--background-main);
-  margin: 0;
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  color: var(--ink-black);
+  background-color: var(--background-main); /* Fundo da página */
+  margin: 0; /* Remove margens padrão do navegador */
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Fonte padrão */
+  color: var(--ink-black); /* Cor padrão dos textos */
 }
 
 /* --- Container dos Cards Superiores de Resumo --- */
 .cont-parag {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 30px 40px 10px 40px;
-  max-width: 1400px;
-  margin: 0 auto;
+  display: grid; /* Utiliza Grid Layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cria colunas responsivas */
+  gap: 20px; /* Espaço entre os cards */
+  padding: 30px 40px 10px 40px; /* Espaçamento interno */
+  max-width: 1400px; /* Limita a largura máxima */
+  margin: 0 auto; /* Centraliza o container */
 }
 
 .cont-parag p {
-  background-color: #ffffff;
-  margin: 0;
-  padding: 20px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--ink-black);
-  box-shadow: 0 4px 6px -1px rgba(0, 8, 20, 0.05), 0 2px 4px -1px rgba(0, 8, 20, 0.03);
-  border-left: 5px solid var(--background-header);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: transform 0.2s ease;
+  background-color: #ffffff; /* Fundo branco */
+  margin: 0; /* Remove margem padrão */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 10px; /* Cantos arredondados */
+  font-weight: 600; /* Texto semi-negrito */
+  font-size: 1.1rem; /* Tamanho da fonte */
+  color: var(--ink-black); /* Cor do texto */
+  box-shadow: 0 4px 6px -1px rgba(0, 8, 20, 0.05), 0 2px 4px -1px rgba(0, 8, 20, 0.03); /* Sombra */
+  border-left: 5px solid var(--background-header); /* Barra lateral amarela */
+  display: flex; /* Centralização com Flexbox */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  text-align: center; /* Centraliza o texto */
+  transition: transform 0.2s ease; /* Anima o movimento */
 }
 
-.cont-parag p:hover {
-  transform: translateY(-3px);
+.cont-parag p:hover { /* Efeito ao passar o mouse */ 
+  transform: translateY(-3px); /* Move o card para cima */ 
 }
 
 /* --- Grid de Gráficos (Dashboard) --- */
 .pagina {
-  display: grid;
+  display: grid; /* Usa Grid */
   /* Cria uma grade flexível de duas colunas em telas grandes */
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 30px;
-  padding: 20px 40px 40px 40px;
-  max-width: 1400px;
-  margin: 0 auto;
-  box-sizing: border-box;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Colunas responsivas */
+  gap: 30px; /* Espaçamento entre gráficos */
+  padding: 20px 40px 40px 40px; /* Espaçamento interno */
+  max-width: 1400px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza */
+  box-sizing: border-box; /* Inclui padding na largura */
   
   /* Garante o alinhamento central caso haja um card órfão */
   justify-content: center;
@@ -62,119 +62,116 @@ body {
 
 /* --- Card Individual do Gráfico --- */
 .grafico {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 25px;
-  height: 380px;
-  box-shadow: 0 10px 15px -3px rgba(0, 8, 20, 0.05), 0 4px 6px -2px rgba(0, 8, 20, 0.02);
-  border: 1px solid rgba(0, 8, 20, 0.05);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
+  background-color: #ffffff; /* Fundo branco */
+  border-radius: 12px; /* Cantos arredondados */
+  padding: 25px; /* Espaçamento interno */
+  height: 380px; /* Altura fixa */
+  box-shadow: 0 10px 15px -3px rgba(0, 8, 20, 0.05), 0 4px 6px -2px rgba(0, 8, 20, 0.02); /* Sombra */
+  border: 1px solid rgba(0, 8, 20, 0.05); /* Borda discreta */
+  box-sizing: border-box; 
+  display: flex; /* Organiza os elementos */
+  flex-direction: column; /* Conteúdo em coluna */
+} 
 
 /* Regra mágica: Alinha o último gráfico sozinho no centro em telas grandes */
 @media (min-width: 1024px) {
   .grafico:last-child:nth-child(odd) {
-    grid-column: span 2;  /* Faz ele ocupar o espaço visual das duas colunas */
-    max-width: 650px;     /* Impede que ele estique infinitamente para os lados */
-    width: 100%;
-    margin: 0 auto;       /* Centraliza horizontalmente */
+    grid-column: span 2; /* Faz ele ocupar o espaço visual das duas colunas */
+    max-width: 650px; /* Impede que ele estique infinitamente para os lados */
+    width: 100%; /* Usa toda a largura disponível */
+    margin: 0 auto; /* Centraliza horizontalmente */
   }
 }
 
 /* Título de cada gráfico */
 .grafico h2 {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.2rem; /* Fonte maior */
+  font-weight: 700; /* Negrito */
   margin-top: 0;
   margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border-bottom: 2px solid var(--background-main);
+  text-transform: uppercase; /* Letras maiúsculas */
+  letter-spacing: 0.5px; /* Espaçamento entre letras */
+  border-bottom: 2px solid var(--background-main); /* Linha inferior */
   padding-bottom: 10px;
 }
 
   .lista {
-    width: 90%;
-    max-width: 700px;
-    margin: 40px auto;
-    grid-column: 1 / -1;
+    width: 90%; /* Largura inicial */
+    max-width: 700px; /* Limite máximo */
+    margin: 40px auto; /* Centraliza */
+    grid-column: 1 / -1; /* Ocupa todas as colunas do Grid */
     justify-self: center;
   
-    width: 100%;
-    max-width: 700px;
-    display: flex;
-    flex-direction: column;
-  
-    padding: 24px;
-    background-color: var(--background-main);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 8, 20, 0.1);
+    width: 100%; /* Ajusta para ocupar toda a largura disponível */
+    max-width: 700px; /* Mantém o limite máximo de largura */
+    display: flex; /* Usa Flexbox */
+    flex-direction: column; /* Itens em coluna */
+   
+    padding: 24px; /* Espaçamento interno */
+    background-color: var(--background-main); /* Fundo */
+    border-radius: 12px; /* Cantos arredondados */
+    box-shadow: 0 4px 12px rgba(0, 8, 20, 0.1); /* Sombra */
   }
 
-  .lista h2 {
-    text-align: center;
-    color: var(--ink-black);
-    margin-bottom: 20px;
+  .lista h2 { /* Título da lista */
+    text-align: center; /* Centraliza */
+    color: var(--ink-black); /* Cor do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
   }
 
-  .lista-produtos {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  .lista-produtos { /* Container dos produtos */
+    display: flex; /* Utiliza Flexbox */
+    flex-direction: column; /* Organiza os produtos em coluna */
+    gap: 12px; /* Espaçamento entre produtos */
+  } 
+
+  .item-produto { /* Cada produto da lista */
+    display: flex; /* Organiza os elementos lado a lado */
+    justify-content: space-between; /* Nome e preço nas extremidades */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 12px 16px; /* Espaçamento interno */
+    background-color: var(--botoes-nav); /* Cor de fundo do card */
+    border-radius: 8px; /* Arredonda os cantos */
+    box-shadow: 0 2px 6px rgba(0, 8, 20, 0.08); /* Adiciona sombra */
+    transition: 0.2s; /* Anima mudanças de estilo */
   }
 
-  .item-produto {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .item-produto:hover { /* Efeito quando o mouse passa sobre o produto */
+    transform: translateY(-2px); /* Move o item levemente para cima */
+    box-shadow: 0 4px 10px rgba(228, 182, 26, 0.3); /* Aumenta a sombra */
+  } 
 
-    padding: 12px 16px;
+  .item-produto h4:first-child { /* Nome do produto */
+    font-weight: 600; /* Deixa o texto em semi-negrito */
+    color: var(--ink-black); /* Cor do texto */
+  } 
 
-    background-color: var(--botoes-nav);
-    border-radius: 8px;
-
-    box-shadow: 0 2px 6px rgba(0, 8, 20, 0.08);
-    transition: 0.2s;
+  .item-produto h:last-child { /* Último título do item (ex.: preço, caso seja um h4) */
+    font-weight: bold; /* Destaca o texto */
+    color: var(--sonbreamento-header); /* Cor de destaque */
   }
 
-  .item-produto:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(228, 182, 26, 0.3);
-  }
-
-  .item-produto h4:first-child {
-    font-weight: 600;
-    color: var(--ink-black);
-  }
-
-  .item-produto h:last-child {
-    font-weight: bold;
-    color: var(--sonbreamento-header);
-  }
-
-  .lista-produtos p {
-    text-align: center;
-    color: var(--ink-black);
+  .lista-produtos p { /* Mensagem exibida quando não há produtos */
+    text-align: center; /* Centraliza o texto */
+    color: var(--ink-black); /* Cor do texto */
   }
 
 /* Responsividade para telas menores (Celulares) */
-@media (max-width: 600px) {
+@media (max-width: 600px) { /* Ajusta os containers para uma única coluna */
   .cont-parag, .pagina {
-    padding: 15px;
-    grid-template-columns: 1fr;
+    padding: 15px; /* Reduz o espaçamento interno */
+    grid-template-columns: 1fr; /* Apenas uma coluna */
   }
   
-  .grafico {
-    height: 320px;
-    padding: 15px;
-  }
+  .grafico { /* Reduz o tamanho dos gráficos em telas pequenas */
+    height: 320px; /* Diminui a altura */
+    padding: 15px; /* Reduz o espaçamento interno */
+  } 
 
   /* Remove o comportamento de span em telas pequenas */
   @media (min-width: 1024px) {
     .grafico:last-child:nth-child(odd) {
-      grid-column: auto;
+      grid-column: auto; /* Volta ao comportamento padrão */
     }
   }
 
